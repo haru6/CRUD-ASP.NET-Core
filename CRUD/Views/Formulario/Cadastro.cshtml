@@ -1,0 +1,49 @@
+﻿@using CRUD.Models.Classe
+
+@model Cliente
+
+<h1>Formulário</h1>
+
+<form asp-action="Cadastrar" asp-controller="Formulario" method="post">
+    <fieldset><h3>Cliente</h3></fieldset>
+    <div class="form-group">
+        <label asp-for="Razao_Social">Razao Social</label>
+        <input type="text" class="form-control" asp-for="Razao_Social" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Cnpj">CNPJ</label>
+        <input type="text" class="form-control" asp-for="Cnpj" /><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Data_Fundacao">Data Fundada</label>
+        <input type="date" asp-for="Data_Fundacao" /><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Capital">Capital</label>
+        <input type="number" class="form-control" asp-for="Capital" /><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="status_cliente">Status</label>
+        <select asp-for="status_cliente">
+            <option selected="selected" value="">Please select</option>
+            <option value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
+        </select><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Quarentena">Quarentena</label>
+        <label><input type="radio" asp-for="Quarentena" value="true" />True</label>
+        <label><input type="radio" asp-for="Quarentena" value="false" />False</label>
+    </div>
+    <div class="form-group">
+        <label asp-for="classificacao">Classificação</label>
+        <select asp-for="classificacao">
+            <option selected="selected" value="">Please select</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select><br />
+    </div>
+    <input type="submit" value="Cadastrar" class="btn btn-outline-success" />
+    <input type="button" value="Fechar" class="btn btn-outline-info" data-dismiss="modal">
+</form>

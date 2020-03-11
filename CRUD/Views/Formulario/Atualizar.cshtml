@@ -1,0 +1,29 @@
+﻿@using CRUD.Models.Classe
+
+@model Cliente
+
+<div class="container">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Detalhes do produto</h4>
+            </div>
+            <form asp-action="Editar" asp-controller="Formulario" asp-route-id="@Model.Id" method="post">
+                <div class="modal-body">
+                    <p><b>ID:</b>@Model.Id"</p>
+                    <p><b>Razão Social:</b><input type="text" asp-for="Razao_Social" value="@Model.Razao_Social"/></p>
+                    <p><b>CNPJ:</b><input type="text" asp-for="Cnpj" value="@Model.Cnpj"/></p>
+                    <p><b>Data Fundação:</b><input type="date" asp-for="Data_Fundacao" value="@Model.Data_Fundacao" /></p>
+                    <p><b>Capital:</b><input type="number" asp-for="Capital" value="@Model.Capital"/></p>
+                    <p><b>Qaurentena:</b><input type="text" asp-for="Quarentena" value="@Model.Quarentena"/></p>
+                    <p><b>Status do Cliente:</b><input type="text" asp-for="status_cliente" value="@Model.status_cliente"/></p>
+                    <p><b>Classificação:</b><input type="text" asp-for="classificacao" value="@Model.classificacao"/></p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Salvar" class="btn btn-outline-warning">
+                    <input type="button" value="Fechar" class="btn btn-outline-info" data-dismiss="modal"/>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

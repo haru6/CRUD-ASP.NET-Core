@@ -1,0 +1,24 @@
+﻿@using CRUD.Models.Classe
+
+@model Cliente
+<div class="container">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Detalhes do produto</h4>
+            </div>
+            <div class="modal-body">
+                <p><b>ID:</b> @Model.Id</p>
+                <p><b>Razão Social:</b> @Model.Razao_Social</p>
+                <p><b>CNPJ:</b> @Model.Cnpj</p>
+                <p><b>Capital:</b> @Model.Capital</p>
+                <p><b>Qaurentena:</b> @Model.Quarentena</p>
+                <p><b>Status do Cliente</b> @Model.status_cliente</p>
+                <p><b>Classificação</b> @Model.classificacao</p>
+            </div>
+            <div class="modal-footer">
+                <input type="button" value="Fechar" class="btn btn-outline-info" data-dismiss="modal"/>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

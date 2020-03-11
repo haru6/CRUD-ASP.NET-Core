@@ -1,0 +1,87 @@
+﻿@using CRUD.Models.Classe
+
+@model IList<Cliente>
+<input type="button" value="Cadastrar" class="btn btn-success mt-3 mb-4 btn_cadastrar">
+<table class="table table-hover text-center">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Razao Social</th>
+            <th>CNPJ</th>
+            <th>Data de Fundação</th>
+            <th>Capital</th>
+            <th>Quarentena</th>
+            <th>Status Cliente</th>
+            <th>Classificação</th>
+            <th>Detalhar</th>
+            <th>Editar</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.Razao_Social</td>
+                <td>@cliente.Cnpj</td>
+                <td>@cliente.Data_Fundacao</td>
+                <td>R$ @cliente.Capital</td>
+                <td>@cliente.Quarentena</td>
+                <td>@cliente.status_cliente</td>
+                <td>@cliente.classificacao</td>
+                <td><input type="button" value="Details" class="btn btn-block btn-info details" data-id=@cliente.Id></td>
+                <td><input type="button" value="Edit" class="btn btn-block btn-warning edit" data-id="@cliente.Id"></td>
+                <td><input type="button" value="Remover" class="btn btn-block btn-danger delete" data-id="@cliente.Id"></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<!--Modal Centralizado-->
+<div class="modal fade bd-example-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="conteudoModal">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $(".details").click(function () {
+                let id = $(this).attr("data-id");
+                $("#conteudoModal").load("Formulario/Detalhar/" + id, function () {
+                    $("#myModal").modal("show");
+                })
+            });
+
+            $(".edit").click(function () {
+                let id = $(this).attr("data-id");
+                $("#conteudoModal").load("Formulario/Atualizar/" + id, function () {
+                    $("#myModal").modal("show");
+                })
+            });
+
+            $(".delete").click(function () {
+                let id = $(this).attr("data-id");
+                $("#conteudoModal").load("Formulario/Deletar/" + id, function () {
+                    $("#myModal").modal("show");
+                })
+            });
+
+            $(".btn_cadastrar").click(function () {
+                $("#conteudoModal").load("Formulario/Cadastro", function () {
+                    $("#myModal").modal("show");
+                })
+            });
+
+        });
+    </script>
+}
+
