@@ -7,6 +7,7 @@ namespace CRUD.Models.Enum
 {
     public enum Status_Cliente
     {
-        Ativo, Inativo
+        Ativo, 
+        Inativo 
     }
 }

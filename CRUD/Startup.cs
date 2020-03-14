@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CRUD.Context;
 using CRUD.IRepositorio;
 using CRUD.Models.Classe;
+using CRUD.Regra_de_Negocio;
 using CRUD.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +34,8 @@ namespace CRUD
             services.AddDbContext<Banco_Dados>(x => x.UseSqlServer(Configuration.GetConnectionString("Default")));
 
             services.AddTransient<ICliente_Repositorio, Cliente_Repositorio>();
+
+            services.AddTransient<ICliente_Regras, ClienteRegra>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

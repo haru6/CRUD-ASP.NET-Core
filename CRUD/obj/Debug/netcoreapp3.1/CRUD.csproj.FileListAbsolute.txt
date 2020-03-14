@@ -2,7 +2,6 @@ C:\Users\rpres\source\repos\CRUD\CRUD\bin\Debug\netcoreapp3.1\appsettings.Develo
 C:\Users\rpres\source\repos\CRUD\CRUD\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\rpres\source\repos\CRUD\CRUD\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\rpres\source\repos\CRUD\CRUD\bin\Debug\netcoreapp3.1\CRUD.exe
-C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\CRUD.csprojAssemblyReference.cache
 C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\staticwebassets\CRUD.StaticWebAssets.Manifest.cache
 C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\staticwebassets\CRUD.StaticWebAssets.xml
 C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\CRUD.RazorAssemblyInfo.cache
@@ -141,3 +140,4 @@ C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\Razor\Views\Formul
 C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\Razor\Views\Formulario\Detalhar.cshtml.g.cs
 C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\Razor\Views\Formulario\Deletar.cshtml.g.cs
 C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\Razor\Views\Formulario\Atualizar.cshtml.g.cs
+C:\Users\rpres\source\repos\CRUD\CRUD\obj\Debug\netcoreapp3.1\CRUD.csprojAssemblyReference.cache

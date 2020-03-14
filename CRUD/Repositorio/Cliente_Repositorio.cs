@@ -1,6 +1,7 @@
 ﻿using CRUD.Context;
 using CRUD.IRepositorio;
 using CRUD.Models.Classe;
+using CRUD.Regra_de_Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,20 @@ namespace CRUD.Repositorio
     public class Cliente_Repositorio : ICliente_Repositorio
     {
         private readonly Banco_Dados _context;
+        private readonly ICliente_Regras _regras;
 
-        public Cliente_Repositorio(Banco_Dados context)
+        public Cliente_Repositorio(Banco_Dados context, ICliente_Regras regras)
         {
             _context = context;
+            _regras = regras;
         }
 
         public void Adiciona (Cliente cliente)
         {
+            cliente = _regras.complemento(cliente);
+            cliente = _regras.quarentena(cliente);
             _context.Clientes.Add(cliente);
-            _context.SaveChanges();
+           _context.SaveChanges();
         }
 
         public Cliente Detalhar(int id)

@@ -7,6 +7,8 @@ namespace CRUD.Models.Enum
 {
     public enum Classificacao
     {
-        A,B,C
+        A,
+        B,
+        C
     }
 }

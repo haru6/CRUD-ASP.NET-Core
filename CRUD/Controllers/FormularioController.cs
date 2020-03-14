@@ -12,6 +12,7 @@ namespace CRUD.Controllers
     {
         private readonly ICliente_Repositorio _repositorio;
 
+
         public FormularioController(ICliente_Repositorio repositorio)
         {
             _repositorio = repositorio;
@@ -64,7 +65,7 @@ namespace CRUD.Controllers
         public IActionResult Atualizar(int id)
         {
             var cliente = _repositorio.Detalhar(id);
-            return View(cliente);
+            return PartialView(cliente);
         }
         [HttpPost]
         public IActionResult Editar(int id, Cliente cliente)
